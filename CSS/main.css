@@ -1,5 +1,5 @@
 #topBar{
-    background-color: black;
+    background-color: #0a2a34;
     height: 40px;
     margin: auto;
     position: fixed;
@@ -15,9 +15,19 @@
     float: right;
 }
 #home{
-    background: blanchedalmond;
+    position: relative;
+    overflow: auto;
     width: auto;
-    height: 550px;
+    height: 700px;
+    margin: auto;
+}
+#introduction{
+    position: relative;
+    background: #293741;
+    color: black;
+    overflow: auto;
+    width: auto;
+    height: 700px;
     margin: auto;
 }
 #photo{
@@ -37,6 +47,13 @@
     left: 50%;
     transform: translate(-50%, -51%);
 
+}
+#wallpaper{
+    position: absolute;
+    width: 398px;
+    height: 404px;
+    bottom: 0%;
+    right: 0%;
 }
 #name{
     margin-bottom: -35px;
@@ -62,9 +79,20 @@ body{
     padding: 14px 16px;
     text-decoration: none;
 }
+.heading{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-size: 55px;
+}
 a{
     text-decoration: none;
     color: white;
+}
+p{
+    text-align: center;
+    color: white;
+    font-size: 25px;
 }
 a:hover{
     color: red;
