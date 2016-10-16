@@ -3,54 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <title>Santiago Ordonez</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../CSS/main.css">
+
 </head>
 
 <body>
-    <script type="text/javascript"></script>
 
-    <div id="topBar">
-        <div class="menu" >
-            <ul id="ul-topbar">
-                <li class="li-menu-categories">
-                    <a href="#introduction" >Introduction</a>
-                </li>
-                <li  class="li-menu-categories">
-                    <a href="#portfolio">Portfolio</a>
 
-                </li>
-                <li  class="li-menu-categories">
-                    <a href="#skills">Skills</a>
-
-                </li>
-                <li  class="li-menu-categories">
-                    <a href="#contact">Contact</a>
-                </li>
+<nav class="navbar navbar-default navbar-fixed-top" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#home" class="navbar-brand">S.O.A</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mainNavBar">
+            <ul class="nav navbar-nav" id="ul-topbar">
+                <li ><a href="#introduction">INTRODUCTION</a></li>
+                <li ><a href="#portfolio">PORTFOLIO</a></li>
+                <li ><a href="#skills">SKILLS</a></li>
+                <li ><a href="#contact">CONTACT</a></li>
             </ul>
-
         </div>
 
-    </div>
-    <div id="home">
-        <img id="wallpaper" src="../Images/androidme.jpg">
-        <div id="profile">
+    </div><!-- /.container-fluid -->
+</nav>
+    <div id="home" class="container">
+        <div id="profile" class="row">
             <img id="photo" src="../Images/JamesRodriguez.jpg">
             <h1 id="name">Santiago Ordonez</h1>
-            <h2 class="info"><span>Developer</span></h2>
+            <h2 id="occupation"><span>Developer</span></h2>
         </div>
 
     </div>
-    <div id="introduction">
-        <div id="about">
+    <div id="introduction" class="row">
+        <div id="about" class="col-xs-12">
             <h1 class="heading">Introduction</h1>
-            <p>My name is Santiago Ordonez, I'm 18 years old and currently pursuing a HBSc degree at the University of Toronto. I aim to specialize in Computer Science and major in Statistics.</p>
+            <p>     My name is Santiago Ordonez, I'm 18 years old and currently doing my undergrad in Computer Science and
+                Statistics at the University of Toronto. I am huge fan of reading books and always learning something new.
+                Whether it's a new technology, a programming concept or even understanding human behavior. I love to learn about it and discuss it with others.</p>
 
+            <p>     I started programming 3 years ago and through these years my love for computers has exponentially increased.
+                I like to use Java and Python when working on projects and I am always working on something new. If you are interested in seeing my latest work you can click <a style = "font-weight: bold" href="https://play.google.com/store/apps/details?id=com.anyconfusionhere.spaceshipgame&hl=en">here!</a> </p>
+            <button id="resume" type="button" class="btn btn-primary btn-lg outline">View Resume</button>
         </div>
 
+
     </div>
-    <div id="portfolio"></div>
-    <div id="skills"></div>
-    <div id="contact"></div>
+    <div id="portfolio" class="row"> </div>
+    <div id="skills" class="row"></div>
+    <div id="contact" class="row"></div>
+    <script>
+        $(document).ready(function () {
+            $('a[href^="#"]').on('click',function(e) {
+                e.preventDefault();
+                var target = this.hash;
+                var $target = $(target);
+
+                $('html, body').animate({
+                    scrollTop: $target.offset().top -30
+                }, 700,"swing",function () {
+                    window.location.hash = target;
+                });
+            });
+        })
+
+    </script>
 </body>
 </html>
