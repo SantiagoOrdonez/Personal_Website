@@ -17,6 +17,45 @@
 }
 .navbar-default .navbar-nav > li > a:hover{
     color: red;
+
+}
+.overlay-container{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+.portfolio-headings{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    text-align: center;
+
+}
+.overlay-container .overlay {
+    width: 70%;
+    height: 100%;
+    color: #FFF;
+    text-align:center;
+    opacity: 0;
+
+}
+.overlay-container:hover .overlay{
+    display: block;
+    background: rgba(0, 0, 0, .6);
+    width: 70%;
+    height: 100%;
+    text-align:center;
+    opacity:1;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+.overlay i {
+    position: absolute;
+    left: calc(50% - 30px);
+    top: calc(50% - 40px);
+    font-size: 90px;
+    color: white;
 }
 #ul-topbar{
     list-style-type: none;
@@ -25,6 +64,15 @@
     overflow: hidden;
     float: right;
 }
+#cosmic{
+    max-width: 70%;
+
+}
+#piano{
+    max-width: 70%;
+
+}
+
 #home{
     background-color: #f5f5f5;
     overflow: auto;
@@ -35,6 +83,15 @@
 #introduction{
     position: relative;
     background-color:#233237;
+    color: black;
+    overflow: auto;
+    width: auto;
+    height: 700px;
+    margin: auto;
+}
+#portfolio{
+    position: relative;
+    background-color: #98434b;
     color: black;
     overflow: auto;
     width: auto;
