@@ -95,7 +95,7 @@
     color: black;
     overflow: auto;
     width: auto;
-    height: 700px;
+    height: 600px;
     margin: auto;
 }
 #photo{
@@ -140,6 +140,20 @@
     padding-right: 20%;
     text-align: center;
 }
+#contact{
+    background-color:#233237;
+    width: auto;
+    height: 250px;
+    margin: auto;
+    text-align: center;
+}
+#contact i {
+    font-size: 80px;
+    text-align: center;
+}
+#contact .container {
+    width: 700px;
+}
 h1, h2, h3, h4, h5, h6 ,p {
     line-height: 1.5;
     font-family: "Roboto", sans-serif;
@@ -149,7 +163,11 @@ body{
     padding: 0;
     font-family: "Roboto", sans-serif;
 }
-
+.social-text{
+    margin-top: 3px;
+    font-weight: 400;
+    font-size: 16px;
+}
 .btn {
     padding: 14px 24px;
     border: 0 none;
